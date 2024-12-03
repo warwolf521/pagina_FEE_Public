@@ -108,11 +108,11 @@ export default function Chat() {
             const username = usersDB.find((u) => u.userID == chat.userID.toString())?.nombre || "Unknown";
             return {
                 userID: chat.userID.toString(),
-                username,
+                username: username,
                 self: chat.userID.toString() === currentUserID,
                 messages: chat.messages?.map((message: Message) => ({
                     content: message.content,
-                    fromSelf: message.fromSelf === (chat.userID.toString() === currentUserID), //lo cambie para poder compilarlo, creo que se rompio en el proceso
+                    fromSelf: (currentUserID === message.fromSelf.toString()),
                     backed_up: true,
                 })) || []
             };
