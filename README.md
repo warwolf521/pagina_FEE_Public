@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project.
 
 We will use bootstrap and bootstrap-react as css libraries.
 
-Is required that the .env file in the root of the project for this to be able to connect to Turso DB.
+The .env file is required to be in the root of the project in order to connect to Turso DB.
 
 ## Getting Started
 
