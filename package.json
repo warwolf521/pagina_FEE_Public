@@ -1,0 +1,46 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@libsql/client": "^0.14.0",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "fortawesome": "^0.0.1-security",
+    "next": "^14.2.13",
+    "next-auth": "^4.24.10",
+    "next-cloudinary": "^6.16.0",
+    "nextjs": "^0.0.3",
+    "prop-types": "^15.8.1",
+    "react": "^18",
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "^18",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^7.0.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/next-auth": "^3.13.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-router-dom": "^5.3.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

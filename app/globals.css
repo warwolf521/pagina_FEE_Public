@@ -1,0 +1,520 @@
+/* Importar Fuentes desde Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+/* Variables para colores, fuentes y tamaños */
+:root {
+  /* Colores */
+  --primary-color: #124261;
+  --secondary-color: #063a62;
+  --highlight-color: #e8a42a;
+  --footer-bg-color: #191C1F;
+  --footer-text-grey: #ADB7BC;
+  --text-light-color: #FFFFFF;
+  --border-color: #E4E7E9;
+  --product-card-border-color: #d9dbdc;
+  --product-card-text-color: #5F6C72;
+  --modal-title-color: #191C1F;
+  --modal-price-color: #2DA5F3;
+  --placeholder-color: #888;
+  --divider-color: #ccc;
+
+  /* Fuentes */
+  --font-primary: 'Public Sans', sans-serif;
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  /* Tamaños */
+  --font-small: 13px;
+  --font-x-small: 12px;
+  --font-large: 26px;
+  --font-medium: 14px;
+  --font-xx-small: 10px;
+
+  /* Alturas */
+  --top-navbar-height: 30px;
+  --bottom-navbar-height: 110px;
+  --footer-height: 260px;
+}
+
+/* Configuración General */
+body {
+  font-family: var(--font-body);
+  color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  color: var(--placeholder-color);
+}
+
+/* Navbar */
+.NavBar {
+  background-color: var(--primary-color) !important;
+  font-family: var(--font-primary);
+}
+
+.top_navbar {
+  height: var(--top-navbar-height);
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.bottom_navbar {
+  height: var(--bottom-navbar-height) !important;
+}
+
+.round_control {
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.Icono {
+  font-size: var(--font-x-small);
+}
+
+.navbar_text {
+  font-size: var(--font-small);
+}
+
+/* Main Container */
+main {
+  flex: 1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+/* Footer */
+.Footer {
+  background-color: var(--footer-bg-color);
+  font-family: var(--font-body);
+  color: var(--text-light-color);
+  padding: 10% !important;
+}
+.footer_cont{
+  padding:4%;
+}
+
+.footer_logo_component {
+  padding: 4%;
+  padding-left: 15%;
+}
+
+.footer_text_gris {
+  color: var(--footer-text-grey);
+  font-size: var(--font-x-small);
+}
+
+.footer_contact {
+  color: var(--text-light-color);
+  font-size: var(--font-medium);
+}
+
+.footer_logo {
+  font-size: 30px;
+  color: var(--text-light-color);
+  font-weight: 600;
+}
+
+.footer_top_text_one {
+  font-size: var(--font-x-small);
+  color: var(--text-light-color);
+}
+
+.bottom_footer {
+  align-items: center;
+}
+
+.bottom_footer_text {
+  color: var(--footer-text-grey);
+  font-size: var(--font-xx-small);
+  padding-top: 2%;
+}
+
+.principal_div_footer {
+  height: var(--footer-height);
+}
+
+.footer_links {
+  padding: 4%;
+}
+/* body */
+.cuerpo{
+  padding: 5%;
+}
+
+
+/* Tarjetas de Producto */
+/*hacer las cards suto fill*/
+.Card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center; /* Centra las filas en el contenedor */
+}
+
+
+.Card_producto {
+  font-family: var(--font-body);
+  border: 1px solid var(--product-card-border-color) !important;
+  border-radius: 3px !important;
+  padding: 0.5%;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  /* Centrado horizontal y con margen vertical */
+  max-width: 300px;
+  height: 350px !important;
+  /* Ajusta el ancho máximo para mejor visualización */
+  text-align: center;
+  /* Centrar contenido */
+  padding: 3% !important;
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.12);
+  margin: 5% !important;
+}
+
+.Card_producto:hover{
+  background-color: #e7e6e6;
+}
+
+.Card_producto img {
+  max-height: 150px;
+}
+
+.Card_producto.ad {
+  border: 2px solid red !important;
+}
+
+.Card_producto_texto {
+  color: var(--product-card-text-color);
+  font-size: var(--font-medium);
+  font-weight: 200;
+}
+
+.Card_producto_precio {
+  color: var(--highlight-color);
+  font-weight: 500;
+}
+
+.Card_producto_boton {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-light-color) !important;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  border-radius: 3px !important;
+}
+
+/* Imagen de Producto */
+.Card_image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 3px 3px 0px 0px !important;
+}
+
+/* Modal */
+.custom-modal .modal-dialog {
+  max-width: 70vw !important;
+}
+
+.custom-modal .modal-content img {
+  width: 40%;
+  max-width: 100%;
+  height: auto;
+}
+
+.custom-modal .modal-content {
+  padding: 4%;
+}
+
+.Modal_producto_boton_carrito {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-light-color) !important;
+  height: auto;
+  padding: 10px;
+  border-radius: 3px !important;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.Modal_producto_boton_carrito:hover {
+  background-color: var(--highlight-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+.Modal_producto_boton_salida {
+  border: 1px solid var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+  border-radius: 3px !important;
+}
+
+.Modal_producto_boton_salida:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-light-color) !important;
+}
+
+/* Modal Texto */
+.Modal_Producto_texto {
+  padding: 2%;
+}
+
+.modal_titulo_texto {
+  color: var(--modal-title-color);
+  font-size: var(--font-large);
+  font-weight: 600;
+  padding-bottom: 5%;
+}
+
+.modal_precio {
+  font-size: 20px;
+  color: var(--modal-price-color);
+  margin-bottom: 5%;
+}
+
+.modal_info {
+  color: var(--modal-title-color);
+}
+
+.modal_info h5 {
+  margin-bottom: 4%;
+  font-size: 18px;
+}
+
+.modal_info p {
+  font-size: var(--font-medium);
+  font-weight: 400;
+  margin-left: 1%;
+}
+
+/* Políticas */
+.politicas {
+  height: 100px;
+  width: 95%;
+  max-width: 1000px !important;
+  margin-left: 2.5%;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  margin-bottom: 3%;
+  padding: 3%;
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.12);
+}
+
+.pol {
+  height: 80%;
+  width: 30% !important;
+  padding: 4%;
+}
+
+.pol h6 {
+  font-size: var(--font-xx-small);
+  color: var(--product-card-text-color);
+  width: 100%;
+  font-weight: 400;
+}
+
+.pol p {
+  font-size: var(--font-xx-small);
+  width: 100%;
+  color: var(--product-card-text-color) !important;
+  font-weight: 300;
+}
+
+.Icon_policy {
+  color: var(--border-color);
+  margin-right: 5%;
+}
+
+/* Divider */
+.vr {
+  width: 1px;
+  height: 50px;
+  background-color: var(--divider-color);
+}
+
+/* Login */
+.Login {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.Login_box {
+  width: 40%;
+  padding: 5%;
+  border-radius: 3px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+  /* Centrado horizontal */
+}
+
+.Login_box input {
+  width: 80%;
+  margin: 6% 0;
+  margin-left: 10%;
+}
+
+.Login_box p {
+  color: var(--product-card-text-color);
+  font-size: small;
+}
+
+.button_login {
+  margin-top: 15%;
+}
+
+.button_login button {
+  width: 60%;
+  background-color: var(--secondary-color);
+  color: var(--text-light-color);
+  font-size: small;
+}
+.button_login {
+  margin-top: 15%;
+}
+
+.button_login button {
+  width: 60%;
+  background-color: var(--secondary-color);
+  color: var(--text-light-color);
+
+}
+.button_login{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 100% !important;
+}
+.button_login button{
+  width: 70%;
+  background-color:#063a62;
+  color: white;
+  font-size: small;
+}
+.button_register{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 100% !important;
+}
+.button_register button{
+  width: 30%;
+  background-color:#e8a42a;
+  color: white;
+  font-size: small;
+}
+
+/* paginacion */
+/* contenedor de la paginación */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espacio consistente entre números y flechas */
+}
+
+/* estilo de los botones de paginación (flechas) */
+.pagination-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #FF7F3F;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #FF7F3F;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* cambio de color al pasar el mouse */
+.pagination-button:hover {
+  background-color: #FF7F3F;
+  color: white;
+}
+
+/* estilo para los números de página */
+.page-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* cambio de color al pasar el mouse sobre los números */
+.page-number:hover {
+  border-color: #FF7F3F;
+  color: #FF7F3F;
+}
+
+/* estado activo de un número de página */
+.page-number.active {
+  background-color: #FF7F3F;
+  color: white;
+  border-color: #FF7F3F;
+}
+.Principal_text_perfil{
+  margin-top: 3% !important;
+}
+.Principal_text_perfil h2{
+  color: var(--primary-color);
+  margin-bottom: 3% !important;
+}
+.Principal_text_perfil h6{
+  font-size: medium;
+  color: var(--product-card-text-color);
+  margin-bottom: 1%;
+}
+.Product_perfil_container {
+  padding: 1%;
+}
+.Crear_publicacion_perfil{
+  width: 95% ;
+  margin-left: 2.5%;
+}
+.Crear_publicacion_perfil input{
+  margin-bottom: 4%;
+  width: 80%;
+  margin-left: 10%;
+}
+.Crear_publicacion_perfil button{
+  width: 20%;
+  margin: 1% 2% 2% 2%;
+}
+.button_subir_imagen_perfil{
+  background-color: var(--highlight-color) !important;
+  color: white !important;
+}
+.button_crear_publicacion_perfil{
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+.text_crear_perfil{
+  margin-bottom: 2%;
+}
+.form_edit_publicacion{
+  margin-bottom: 2%;
+}
+.form_edit_publicacion input{
+  width: 60% !important;
+}
+.form_edit_publicacion-button_confirm {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+.form_edit_publicacion-button_cancel{
+  background-color: var(--highlight-color) !important;
+  color: white !important;
+}
